@@ -1,20 +1,22 @@
 import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
-import { fetchGenres } from '../redux/actions/genreActions';
+import { fetchGenres } from '../../redux/actions/genreActions';
+import Genre from '../../components/Genre';
+import './home.scss';
 
 const Home = ({ fetchGenres, genres }) => {
-  console.log(genres)
   useEffect(() => {
     fetchGenres();
   }, [fetchGenres]);
   return (
-    <React.Fragment>
-      <div>Genres</div>
-      <hr/>
+    <div className="genres">
       {
-        genres && genres.map(genre => <div key={genre.id}>{genre.name}</div>)
+        genres && genres.map(genre => 
+        <div key={genre.id}>
+          <Genre name={genre.name} />
+        </div>)
       }
-    </React.Fragment>
+    </div>
   )
 }
 

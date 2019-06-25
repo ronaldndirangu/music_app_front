@@ -1,20 +1,22 @@
 import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
-import { fetchArtists } from '../redux/actions/artistActions';
+import { fetchArtists } from '../../redux/actions/artistActions';
+import Artist from '../../components/Artist';
+import './artists.scss';
 
 const Artists = ({ fetchArtists, artists }) => {
-  console.log(artists)
   useEffect(() => {
     fetchArtists();
   }, [fetchArtists]);
   return (
-    <React.Fragment>
-      <div>Artists</div>
-      <hr/>
+    <div className="genres">
       {
-        artists && artists.map(artist => <div key={artist.id}>{artist.name}</div>)
+        artists && artists.map(artist => 
+        <div key={artist.id}>
+          <Artist name={artist.name} />
+        </div>)
       }
-    </React.Fragment>
+    </div>
   )
 }
 

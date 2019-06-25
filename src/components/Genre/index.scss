@@ -1,0 +1,23 @@
+.genre-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: fit-content;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+}
+
+.genre-card__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 1rem;
+}

@@ -1,0 +1,27 @@
+.btn-primary {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  justify-content: space-between;
+  padding: 0.4rem 0.5rem;
+  margin-top: 0.6rem;
+  background: none;
+  text-transform: capitalize;
+  font-weight: 600;
+  border: none;
+  border-radius: 2px;
+  color: #433FBF;
+
+  i {
+    margin-right: 5px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #433FBF33;
+  }
+}

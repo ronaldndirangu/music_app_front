@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:8000/api/v1'
+const apiUrl = process.env.REACT_APP_APIURL;
 
 export const getGenres = () => {
   return axios({

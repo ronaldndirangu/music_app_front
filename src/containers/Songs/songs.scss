@@ -1,0 +1,14 @@
+.songs {
+  display: flex;
+  width: 100%;
+  padding: 0px 10rem;
+  justify-content: center;
+  flex-direction: column;
+  overflow: scroll;
+
+  > div {
+    &:nth-child(n) {
+      margin: 1rem 0;
+    }
+  }
+}

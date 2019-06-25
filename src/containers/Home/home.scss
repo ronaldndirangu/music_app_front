@@ -1,0 +1,9 @@
+.genres {
+  display: flex;
+
+  > div {
+    &:nth-child(n) {
+      margin: 0 1rem;
+    }
+  }
+}
